@@ -1,4 +1,42 @@
+![alt text](image-1.png)
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+A modern user profile form with server-side rendering, form validation, and internationalization support built with Next.js App Router.
+
+## Features
+
+- **Server-Side Rendered Form**
+  - Initial data loading from mock API
+  - Loading states with skeleton UI
+- **Robust Validation**
+  - Zod schema validation (server-side)
+  - Client-side validation with custom error messages
+  - Field requirements:
+    - Name (required, min 2 chars)
+    - Email (required, valid format)
+    - Bio (optional, max 200 chars)
+- **Form Handling**
+  - Server Actions for form submission
+  - Optimistic UI updates
+  - Toast notifications for success/error states
+- **Internationalization**
+  - Support for multiple languages (English/Arabic)
+  - Right-to-left (RTL) layout support
+- **Bonus Features**
+  - Profile picture upload (mock implementation)
+  - Responsive design with Tailwind CSS
+  - Reusable form components
+
+## Technologies Used
+
+- [Next.js](https://nextjs.org/) (App Router)
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Zod](https://zod.dev/) (Validation)
+- [Lucide React](https://lucide.dev/) (Icons)
+- [Sonner](https://sonner.emilkowal.ski/) (Toasts)
+- [Vitest](https://vitest.dev/) (Testing)
 
 ## Getting Started
 
@@ -14,11 +52,23 @@ pnpm dev
 bun dev
 ```
 
+## Constraints
+
+Couldn't use UseFormState since it was deprecated, had to use UseActionState
+![alt text](image.png)
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Testing
+
+npm test
+
+# or
+
+yarn test
 
 ## Learn More
 
